@@ -30,12 +30,14 @@ public class Menu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuBar1 = new javax.swing.JMenuBar();
+        info = new javax.swing.JMenuBar();
         cadastro = new javax.swing.JMenu();
         cadastroMedico = new javax.swing.JMenuItem();
         cadastroPaciente = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         sair = new javax.swing.JMenuItem();
         sobre = new javax.swing.JMenu();
+        Informacoes = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hospital Planalto");
@@ -63,6 +65,14 @@ public class Menu extends javax.swing.JFrame {
         });
         cadastro.add(cadastroPaciente);
 
+        jMenuItem1.setText("Lista Consulta");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        cadastro.add(jMenuItem1);
+
         sair.setText("Sair");
         sair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,7 +81,7 @@ public class Menu extends javax.swing.JFrame {
         });
         cadastro.add(sair);
 
-        jMenuBar1.add(cadastro);
+        info.add(cadastro);
 
         sobre.setText("Sobre");
         sobre.addActionListener(new java.awt.event.ActionListener() {
@@ -79,9 +89,18 @@ public class Menu extends javax.swing.JFrame {
                 sobreActionPerformed(evt);
             }
         });
-        jMenuBar1.add(sobre);
 
-        setJMenuBar(jMenuBar1);
+        Informacoes.setText("Informações");
+        Informacoes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                InformacoesActionPerformed(evt);
+            }
+        });
+        sobre.add(Informacoes);
+
+        info.add(sobre);
+
+        setJMenuBar(info);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -116,6 +135,7 @@ public class Menu extends javax.swing.JFrame {
 
     private void sobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sobreActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_sobreActionPerformed
 
     private void cadastroPacienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastroPacienteActionPerformed
@@ -123,6 +143,17 @@ public class Menu extends javax.swing.JFrame {
         CadPaciente tela = new CadPaciente();
         tela.show();
     }//GEN-LAST:event_cadastroPacienteActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+         Consulta tela = new Consulta();
+         tela.show();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void InformacoesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_InformacoesActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(rootPane,"Desenvolvido por: Marcus Vinicius da Rocha Alves"); 
+    }//GEN-LAST:event_InformacoesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -160,10 +191,12 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem Informacoes;
     private javax.swing.JMenu cadastro;
     private javax.swing.JMenuItem cadastroMedico;
     private javax.swing.JMenuItem cadastroPaciente;
-    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuBar info;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem sair;
     private javax.swing.JMenu sobre;
     // End of variables declaration//GEN-END:variables
